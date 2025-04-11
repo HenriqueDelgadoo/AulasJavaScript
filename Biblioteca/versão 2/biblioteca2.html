@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+    <link rel="stylesheet" href="biblioteca.css">
+</head>
+<body>
+    <div class="container">
+        <h1> BIBLIOTECA SENAI - EDUCAÇÃO PARA A VIDA!</h1>
+        <div class="menu">
+            <button onclick="mostrarsecao('cadastro')">
+                <i class="fas fa-book-medical icon"></i>Cadastrar livro
+            </button>
+            <button onclick="mostrarsecao('consulta')">
+                <i class="fas fa-search icon"></i>Consultar livro
+            </button>
+            <button onclick="mostrarsecao('alterar')">
+                <i class="fas fa-edit icon"></i>Alterar livro
+            </button>
+            <button onclick="mostrarsecao('emprestar')">
+                <i class="fas fa-exchange-alt icon"></i>Emprestar livro
+            </button>
+        </div>
+
+        <!-- Seção de cadastro -->
+        <div id="cadastro" class="hidden">
+            <h2>Cadastrar livro</h2>
+            <div class="form-group">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" placeholder="Digite o título do livro">
+            </div>
+            <div class="form-group">
+                <label for="autor">Autor:</label>
+                <input type="text" id="autor" placeholder="Digite o autor do livro">
+            </div>
+            <div class="form-group">
+                <label for="ano">Ano:</label>
+                <input type="text" id="ano" placeholder="Digite o ano de publicação">
+            </div>
+            <div>
+                <button onclick="adicionarLivro()">Adicionar o livro</button>
+            </div>
+        </div>
+
+        <!-- Seção de consulta -->
+        <div id="consulta" class="hidden">
+            <h2>Consultar livros</h2>
+            <input type="text" id="busca" placeholder="Buscar por título" oninput="buscarLivro()">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>Ano</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-livros"> 
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Seção de alterar -->
+        <div id="alterar" class="hidden">
+            <h2>Alterar livro</h2>
+            <input type="text" id="buscar-alterar" placeholder="Buscar livro para alterar" oninput="buscarLivroAlterar()">
+            <div id="form-alterar" class="hidden">
+                <div class="form-group">
+                    <label for="novo-titulo">Novo título:</label>
+                    <input type="text" id="novo-titulo" placeholder="Novo título">
+                </div>
+                <div class="form-group">
+                    <label for="novo-autor">Novo autor:</label>
+                    <input type="text" id="novo-autor" placeholder="Novo autor">
+                </div>
+                <div class="form-group">
+                    <label for="novo-ano">Novo ano:</label>
+                    <input type="text" id="novo-ano" placeholder="Novo ano">
+                </div>
+                <button onclick="alterarLivro()">Alterar livro</button>
+            </div>
+        </div>
+
+        
+        <div id="emprestar" class="hidden">
+            <h2>Emprestar livro</h2>
+            <div class="form-group">
+                <label for="livro-emprestar">Título do livro a ser emprestado:</label>
+                <input type="text" id="livro-emprestar" placeholder="Digite o nome do livro">
+            </div>
+            <button onclick="emprestarLivro()">Emprestar</button>
+        </div>
+    </div>
+
+    <script src="Biblioteca2.js"></script>
+</body>
+</html>

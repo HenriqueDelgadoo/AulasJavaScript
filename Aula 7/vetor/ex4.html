@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exemplo 4</title>
+</head>
+<body>
+    <input type="text" id="vetorBusca" placeholder = "Digite os números separados por virgula">
+    <input type="text" id="elementoBusca" placeholder = "Elemento a buscar">
+    <button onclick= "buscarElemento()">Buscar elemento</button>
+    <p id="resultadoBusca"></p>
+    <script>
+        function buscarElemento (){
+            const vetor = document.getElementById ("vetorBusca").value.split (","). map (Number);
+            const elemento = Number (document.getElementById ("elementoBusca").value);
+            const indice = vetor.indexOf (elemento);
+            document.getElementById ("resultadoBusca").innerHTML = "Indice: "  + indice ;
+        }
+    </script>
+    
+</body>
+</html>

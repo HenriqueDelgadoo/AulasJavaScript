@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Placa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #resultado {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Verificação de Placa</h2>
+        <input type="text" id="placa" placeholder="Digite a placa do carro">
+        <button onclick="verificarPlaca()">Verificar</button>
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function verificarPlaca() {
+            let placa = document.getElementById("placa").value.trim().toUpperCase();
+            let resultado = document.getElementById("resultado");
+
+            if (placa.startsWith("DPK0A59")) {
+                resultado.textContent = "Entrada gratuita.";
+                resultado.style.color = "green";
+            } else {
+                resultado.textContent = "Cobrança de R$15,00.";
+                resultado.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

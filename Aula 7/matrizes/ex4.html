@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma das linhas</title>
+</head>
+<body>
+    <input type="text" id="soma" placeholder = "Digite 9 números separados (3X3)">
+    <button onclick= "somar()">Somar matriz</button>
+    <p id="resultadosoma"></p>
+    <script>
+        function somar(){
+const vetor = document.getElementById ("soma").value.split (" "). map (Number);
+const matriz = [];
+for (let i = 0; i < 3; i ++){
+    matriz [i] = vetor.slice ( i * 3, (i + 1) * 3); // Define as linhas e colunas da matriz
+}
+let resultado = "";
+for (let j = 0; j< 3; j ++){ 
+// i se torna o valor da linha ou coluna
+    let soma = 0;
+for (let i=0; i < 3; i++){  // jota se torna o valor da linha ou coluna seguintes
+        soma += matriz [i][j];
+    }
+    resultado += "coluna" + (j + 1) + ": " + soma + "<br>";
+}
+document.getElementById ("resultadosoma").innerHTML = resultado;
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoção Sorveteria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        select, button {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #resultado {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Escolha seu pedido</h2>
+        <select id="pedido">
+            <option value="casquinha">Casquinha</option>
+            <option value="picole">Picolé</option>
+        </select>
+        <button onclick="verificarPromocao()">Fazer Pedido</button>
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function verificarPromocao() {
+            let pedido = document.getElementById("pedido").value;
+            let resultado = document.getElementById("resultado");
+
+            if (pedido === "casquinha") {
+                resultado.textContent = "Promoção: Você ganhou outra casquinha grátis!";
+                resultado.style.color = "green";
+            } else if (pedido === "picole") {
+                resultado.textContent = "Promoção: Você ganhou um cupom de desconto para a próxima compra!";
+                resultado.style.color = "blue";
+            }
+        }
+    </script>
+</body>
+</html>

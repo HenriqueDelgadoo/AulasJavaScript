@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="vetorDuplicatas" placeholder = "Digite os números separados por virgula">
+    <button onclick= "remover()">Buscar elemento</button>
+    <p id="resultadoDuplicatas"></p>
+    <script>
+        function remover(){
+            const vetor = document.getElementById("vetorDuplicatas").value.split (",").map(Number);
+            const vetorUnico = [...new Set (vetor)];
+            document.getElementById ("resultadoDuplicatas").innerHTML = "vetor sem duplicatas: " + vetorUnico;
+        }
+    </script>
+    
+</body>
+</html>

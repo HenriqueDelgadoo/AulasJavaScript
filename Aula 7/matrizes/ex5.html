@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meses do Ano</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Meses do Ano</h2>
+        <input type="text" id="entrada" placeholder="Digite números de 1 a 12 separados por espaço">
+        <button onclick="exibirMeses()">Mostrar Meses</button>
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function exibirMeses() {
+            const meses = [
+                "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", 
+                "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+            ];
+            
+            const entrada = document.getElementById("entrada").value.split(" ").map(Number);
+            const mesesSelecionados = entrada
+                .filter(num => num >= 1 && num <= 12) // Filtra valores válidos
+                .map(num => meses[num - 1]); // Converte número em mês
+
+            document.getElementById("resultado").innerHTML = 
+                mesesSelecionados.length > 0 ? "Meses selecionados: " + mesesSelecionados.join(", ") : 
+                "Digite números válidos de 1 a 12.";
+        }
+    </script>
+
+</body>
+</html>

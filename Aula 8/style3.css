@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+    background-color: #e1ff00;
+}
+h2 {
+    color: #333;
+}
+select, button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+}
+button {
+    background-color: #00ff15;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+#resultado, #carrinho {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}

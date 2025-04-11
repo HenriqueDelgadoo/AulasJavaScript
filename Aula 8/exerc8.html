@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Bom Sabor - Promoção</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        select, button {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button {
+            background: #d9534f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #resultado {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Escolha suas pizzas</h2>
+        <label for="pizza1">Primeira Pizza:</label>
+        <select id="pizza1">
+            <option value="pequena">Pequena</option>
+            <option value="media">Média</option>
+            <option value="grande">Grande</option>
+        </select>
+        
+        <label for="pizza2">Segunda Pizza:</label>
+        <select id="pizza2">
+            <option value="pequena">Pequena</option>
+            <option value="media">Média</option>
+            <option value="grande">Grande</option>
+        </select>
+
+        <button onclick="verificarBrinde()">Fazer Pedido</button>
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function verificarBrinde() {
+            let pizza1 = document.getElementById("pizza1").value;
+            let pizza2 = document.getElementById("pizza2").value;
+            let resultado = document.getElementById("resultado");
+
+            if (pizza1 === "grande" && pizza2 === "grande") {
+                resultado.textContent = "Promoção: Você ganhou um refrigerante de 2 litros!";
+                resultado.style.color = "green";
+            } else if ((pizza1 === "media" && pizza2 === "pequena") || (pizza1 === "pequena" && pizza2 === "media")) {
+                resultado.textContent = "Promoção: Você ganhou uma porção de pão de alho!";
+                resultado.style.color = "blue";
+            } else {
+                resultado.textContent = "Nenhuma promoção aplicada.";
+                resultado.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
