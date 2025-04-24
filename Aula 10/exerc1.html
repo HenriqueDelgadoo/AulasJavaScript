@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter Moeda</title>
+</head>
+<body>
+    Dinheiro em reais: <input type="number" id="valorReal" value="100.00"><br>
+    Moeda (dolar, euro): <input type="text" id="Moeda" value="euro"><br><br>
+
+    <button onclick="TaxaCambio()">Converter</button>
+    <div id="Conversao"></div>
+
+    <script>
+        function TaxaCambio() {
+            let real = parseFloat(document.getElementById("valorReal").value);
+            let moeda = document.getElementById("Moeda").value.toLowerCase(); // transforma em minúsculas
+            let valorConvertido;
+
+            switch (moeda) {
+                case "dolar":
+                    valorConvertido = real / 5.30;
+                    break;
+                case "euro":
+                    valorConvertido = real / 6.00;
+                    break;
+                default:
+                    valorConvertido = "Insira uma moeda válida (dolar ou euro)";
+            }
+
+            document.getElementById("Conversao").innerHTML= `A conversão deu aproximadamente ${valorConvertido.toFixed(2)} ${moeda}`;
+        }
+    </script>
+</body>
+</html>

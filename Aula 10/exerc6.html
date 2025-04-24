@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de roupas</title>
+</head>
+<body>
+    <div>
+        <label for="Roupas">Roupa</label>
+        <div>
+            <input type="text" id="roupaEscolhida" placeholder="Digite o nome da roupa">
+        </div>
+
+        <ul>
+            <li>Camiseta polo</li>
+            <li>Calças</li>
+            <li>Tênis</li>
+        </ul>
+        
+        <button onclick="buscarRoupa()">Buscar roupa</button>
+    </div>
+
+    <div id="resultado"></div>
+
+    <script>
+        function buscarRoupa() {
+            const roupa = {
+                'camiseta polo': { marca: 'Lacoste', cor: 'Preto', preço: '99,90' },
+                'calça': { marca: 'Louis Vuitton', cor: 'Preta', preço: '599,90' },
+                'tenis': { marca: 'BAPE', cor: 'Branco', preço: '199,90' },
+            };
+
+            const nome = document.getElementById("roupaEscolhida").value.toLowerCase();
+            const resultado = document.getElementById("resultado");
+            let info;
+
+            
+            switch (nome) {
+                case 'camiseta polo':
+                    info = roupa['camiseta polo'];
+                    break;
+                case 'calça':
+                    info = roupa['calça'];
+                    break;
+                case 'tenis':
+                    info = roupa['tenis'];
+                    break;
+                default:
+                    info = null; 
+                    break;
+            }
+
+            
+            if (info) {
+                resultado.innerHTML = `
+                    <p><strong>Marca:</strong> ${info.marca}</p>
+                    <p><strong>Cor:</strong> ${info.cor}</p>
+                    <p><strong>Preço:</strong> ${info.preço}</p>`;
+            } else {
+                resultado.innerHTML = `<p>A roupa não foi encontrada.</p>`;
+            }
+            document.getElementById("roupaEscolhida").value = ""
+        }
+    </script>
+</body>
+</html>

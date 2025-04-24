@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carro</title>
+</head>
+<body>
+    <div>
+        <div>
+            <h1>Portifólio de carros</h1>
+        </div>
+        <label for="tipoDeCarro">Modelo de carro</label>
+        <div>
+            <input type="text" id="tipoDeCarro" placeholder="Digite o modelo de carro">
+        </div>
+        <ul>
+            <li>Civic</li>
+            <li>Corolla</li>
+            <li>HB20</li>
+        </ul>
+        <button onclick="verificarModelo()">Buscar carro</button>
+        <div id="resultado"></div>
+
+        <script>
+            function verificarModelo() {
+                const carros = {
+                    'civic': { marca: 'Honda', ano: 2020, cor: 'Preto', preço: '99.999,90' },
+                    'corolla': { marca: 'Toyota', ano: 2021, cor: 'Prata', preço: '129.900,90' },
+                    'hb20': { marca: 'Hyundai', ano: 2019, cor: 'Branco', preço: '199.999,90' }
+                };
+
+                const nome = document.getElementById("tipoDeCarro").value.toLowerCase();
+                const resultado = document.getElementById("resultado");
+                let info;
+
+             
+                switch (nome) {
+                    case 'civic':
+                        info = carros['civic'];
+                        break;
+                    case 'corolla':
+                        info = carros['corolla'];
+                        break;
+                    case 'hb20':
+                        info = carros['hb20'];
+                        break;
+                    default:
+                        info = null;
+                        break;
+                }
+
+                if (info) {
+                    resultado.innerHTML = `
+                        <p><strong>Marca:</strong> ${info.marca}</p>
+                        <p><strong>Ano:</strong> ${info.ano}</p>
+                        <p><strong>Cor:</strong> ${info.cor}</p>
+                        <p><strong>Preço:</strong> ${info.preço}</p>`;
+                } else {
+                    resultado.innerHTML = `<p>O carro não foi encontrado.</p>`;
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

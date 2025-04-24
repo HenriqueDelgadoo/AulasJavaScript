@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estação do ano</title>
+</head>
+<body>
+    mês do ano <input type="number" id="mesAno" min="1" max="12" value="6"><br>
+    <button onclick="estacaodoAno()">Verificar estação</button>
+    <div id="resultadoEstação"></div>
+
+    <script>
+        function estacaodoAno(){
+            let mes = parseInt(document.getElementById("mesAno").value);
+            let estacao;
+            switch(mes){
+                case 1: 
+                case 2: 
+                case 12: 
+                estação = "verão"
+                break;
+            
+                case 3: 
+                case 4: 
+                case 5: 
+                estação = "outono"
+            break;
+                case 6: 
+                case 7: 
+                case 8: 
+                estação = "inverno"
+                break;
+                case 9: 
+                case 10: 
+                case 11: 
+                estação = "primavera"
+                break;
+                default: 
+                "Valor inválido"
+            }
+            document.getElementById("resultadoEstação").innerHTML = ` A estação do ano correspondente é <strong>${estação}</strong>`
+        }
+    </script>
+</body>
+</html>

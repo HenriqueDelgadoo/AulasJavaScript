@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação de Áreas</title>
+</head>
+<body>
+    <div> 
+    <div> 
+    <label for="tipoFigura">Tipo de figura: </label> 
+    <input type="text" id="tipoFigura" placeholder="(quadrado, triangulo, circulo)"> <br><br>
+    </div>
+    </div>
+    Dimensão 1: 
+    <input type="number" id="dimensaoDaFigura1" placeholder="Insira uma dimensão"><br><br>
+
+    Dimensão 2 (raio para círculo): 
+    <input type="number" id="dimensaoDaFigura2" placeholder="Insira outra dimensão (ou π para círculo)"><br><br>
+
+    <button onclick="calcularArea()">Calcular</button>
+</div>
+    <div>
+        <p id="ResultadoArea"></p>
+    </div>
+
+    <script>
+        function calcularArea() {
+            let figura = document.getElementById("tipoFigura").value.toLowerCase();
+            let num1 = parseFloat(document.getElementById("dimensaoDaFigura1").value);
+            let num2 = parseFloat(document.getElementById("dimensaoDaFigura2").value);
+            let area;
+
+            switch (figura) {
+                case "quadrado":
+                    area = num1 * num2;
+                    break;
+                case "triangulo":
+                    area = (num1 * num2) / 2;
+                    break;
+                case "circulo":
+                    area = Math.PI * num1 * num1;
+                    break;
+                default:
+                    area = "Insira um tipo de figura válido (quadrado, triangulo ou circulo)";
+            }
+
+            document.getElementById("ResultadoArea").innerHTML = `A área da figura é aproximadamente ${area.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
