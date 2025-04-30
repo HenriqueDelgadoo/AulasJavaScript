@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signos</title>
+</head>
+<body>
+    <h1>Encontre Signos</h1>
+    <div>
+        <label for="tipoSignos">Coloque o mês que nasceu</label>
+        <input type="number" id="tipoSignos" min="1" max="12"><br>
+        <button onclick="verificarSigno()">Ache seu signo</button>
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function verificarSigno() {
+            let mes = parseInt(document.getElementById("tipoSignos").value);
+            let resultado = "";
+
+            switch (mes) {
+                case 1:
+                    resultado = "Capricórnio ou Aquário";
+                    break;
+                case 2:
+                    resultado = "Aquário ou Peixes";
+                    break;
+                case 3:
+                    resultado = "Peixes ou Áries";
+                    break;
+                case 4:
+                    resultado = "Áries ou Touro";
+                    break;
+                case 5:
+                    resultado = "Touro ou Gêmeos";
+                    break;
+                case 6:
+                    resultado = "Gêmeos ou Câncer";
+                    break;
+                case 7:
+                    resultado = "Câncer ou Leão";
+                    break;
+                case 8:
+                    resultado = "Leão ou Virgem";
+                    break;
+                case 9:
+                    resultado = "Virgem ou Libra";
+                    break;
+                case 10:
+                    resultado = "Libra ou Escorpião";
+                    break;
+                case 11:
+                    resultado = "Escorpião ou Sagitário";
+                    break;
+                case 12:
+                    resultado = "Sagitário ou Capricórnio";
+                    break;
+                default:
+                    resultado = "Mês inválido.";
+            }
+
+            document.getElementById("resultado").innerHTML = `O mês selecionado foi ${mes} e o signo pode ser: ${resultado}`;
+        }
+    </script>
+</body>
+</html>
