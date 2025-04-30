@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispositivos antigos</title>
+</head>
+<body>
+    <h1> Os dispositivos antigos </h1>
+<div>
+    <div>
+        <label for="dispositoSelecionado">Coloque o nome do dispositivo</label>
+        <input type="text" id="dispositoSelecionado"placeholder=" Ex: DVD">
+        <button onclick="encontrarAparelho()">Encontre aqui</button>
+    </div>
+    <div id="resultado"></div>
+<script>
+    function encontrarAparelho(){
+        let aparelho = document.getElementById ("dispositoSelecionado").value.toLowerCase();
+        let resultado = ""
+
+        if (aparelho == "fita cassete"){
+            resultado = "A fita cassete, também conhecida como K7, é um formato de armazenamento de áudio analógico que foi popularizado pela Philips em 1963. Consiste em uma fita magnética alojada dentro de uma embalagem plástica, com dois carretéis para rolar a fita durante a reprodução ou gravação"
+        }
+        else if (aparelho == "dvd"){
+            resultado = "Um DVD (Disco de Vídeo Digital) é um formato de armazenamento de dados em disco óptico digital, que surgiu como alternativa mais eficiente ao CD. Ele utiliza um laser para ler os dados gravados no disco, e permite armazenar uma grande quantidade de informação, como filmes, músicas e outros arquivos. "
+        }
+        else if (aparelho == "cd"){
+        resultado = "Em informática e música, cd geralmente significa Compact Disc, ou seja, um disco compacto. Em logística, cd pode se referir a um centro de distribuição."
+    }else{
+        resultado="Insira CD; DVD ou fita cassete"
+    }
+    document.getElementById("resultado").innerHTML = resultado;
+}
+</script>
+</div>
+</body>
+</html>
