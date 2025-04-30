@@ -16,7 +16,7 @@
     <input type="number" id="dimensaoDaFigura1" placeholder="Insira uma dimensão"><br><br>
 
     Dimensão 2 (raio para círculo): 
-    <input type="number" id="dimensaoDaFigura2" placeholder="Insira outra dimensão (ou π para círculo)"><br><br>
+    <input type="number" id="dimensaoDaFigura2" placeholder="Insira outra dimensão (ou raio para círculo)"><br><br>
 
     <button onclick="calcularArea()">Calcular</button>
 </div>
@@ -39,7 +39,7 @@
                     area = (num1 * num2) / 2;
                     break;
                 case "circulo":
-                    area = Math.PI * num1 * num1;
+                    area = Math.PI * (num2 * num2);
                     break;
                 default:
                     area = "Insira um tipo de figura válido (quadrado, triangulo ou circulo)";
