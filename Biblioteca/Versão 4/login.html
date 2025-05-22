@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Tela de login</title>
+</head>
+<body>
+    <div id="login" class="container">
+        <h1>Bem vindo à nossa biblioteca</h1>
+        <h2>Faça login para continuar</h2>
+        <div class="form-group">
+            <label for="ususario">Usuário:</label>
+            <input type="text" id="usuario" placeholder="Digite seu usuário">
+        </div>
+        <div class="form-group">
+            <label for="senha">senha:</label>
+            <input type="password" id="senha" placeholder="Digite sua senha">
+        </div>
+        <button onclick="validarLogin()">Entrar</button>
+        <p id="mensagem" class="mensagem hidden"></p>
+    </div>
+    <footer>
+        <img src="https://ead.sp.senai.br/Content/NovoLayout/imgs/logo-senai.png" alt="logo senai">
+    </footer>
+    <script src="login.js"></script>
+</body>
+</html>

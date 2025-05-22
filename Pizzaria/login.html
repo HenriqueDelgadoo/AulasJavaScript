@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login - Pizzaria</title>
+    <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+    <!-- Logo no canto superior direito -->
+    <img src="delgado's.png" alt="Logo pizzaria" id="logo-topo" />
+
+    <div id="login" class="container">
+        <h1>Bem-vindo à melhor pizzaria da região!</h1>
+        <h2>Faça login para continuar</h2>
+
+        <div class="form-group">
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" placeholder="Digite seu usuário" />
+        </div>
+
+        <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" placeholder="Digite sua senha" />
+        </div>
+
+        <button onclick="validarLogin()">Entrar</button>
+
+        <p id="mensagem" class="mensagem hidden"></p>
+
+        <!-- Links para cadastro e recuperação de senha -->
+        <p>
+            Não possui um usuário?
+            <a href="cadastro.html"><strong>Cadastrar-se</strong></a>
+        </p>
+        <p>
+            <a href="esqueci-senha.html"><strong>Esqueci a senha</strong></a>
+        </p>
+    </div>
+
+    <footer>
+        
+    </footer>
+
+    <script src="login.js"></script>
+</body>
+</html>
