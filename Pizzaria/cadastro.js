@@ -6,26 +6,27 @@ function cadastro(){
     const csenha = document.getElementById("csenha").value; 
     let mensagem = "";
 
-    // Validação do email
+
     if (!email.includes('@') || !email.includes('.')) {
         mensagem = "Por favor, insira um email válido.";
     }
-    // Verificação de senha
+
     else if (senha.length < 6) {
         mensagem = "A senha precisa ter pelo menos 6 caracteres.";
     }
-    // Verificação de confirmação da senha
+  
     else if (senha !== csenha) {
         mensagem = "As senhas não coincidem.";
     }
-    // Verificação de campos obrigatórios
+ 
     else if (endereco === "" || numero === "") {
         mensagem = "Endereço e número são obrigatórios.";
     }
     else {
         mensagem = "Cadastro realizado com sucesso!";
-        // Aqui, você pode adicionar a lógica para enviar os dados ou salvar no banco
-        // Exemplo: salvar no banco ou mostrar a mensagem de sucesso no formulário
+                setTimeout(() => {
+            window.location.href = "login.html";
+        }, 1000);
     }
 
     // Exibindo a mensagem no elemento com id "mensagem"

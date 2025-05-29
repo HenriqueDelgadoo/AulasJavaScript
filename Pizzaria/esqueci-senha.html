@@ -1,17 +1,312 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sistema de Acesso Seguro</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --success-color: #2ecc71;
+            --warning-color: #f39c12;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: #f5f7fa;
+            color: var(--dark-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .info-box {
+            background: var(--light-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .info-title {
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-item {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #ddd;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .admin-credentials {
+            background-color: rgba(231, 76, 60, 0.1);
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        .auth-form {
+            background: rgba(52, 152, 219, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .alert {
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        .alert-error {
+            background-color: rgba(231, 76, 60, 0.2);
+            border-left: 4px solid var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .alert-success {
+            background-color: rgba(46, 204, 113, 0.2);
+            border-left: 4px solid var(--success-color);
+            color: var(--success-color);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .visible {
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--light-color);
+            color: var(--dark-color);
+            font-size: 0.9rem;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <h1>Seus usuários e senhas</h1>
-    <h2>Usuários:</h2>
-    <p>Joao</p>
-    <p>Admin</p>
-    <h2>Senhas:</h2>
-    <P>1234</P>
-    <p>1234</p>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-shield-alt"></i> Sistema de Acesso Seguro</h1>
+            <p class="subtitle">Credenciais protegidas por código de autenticação</p>
+        </header>
+
+        <div class="content">
+            <div class="info-grid">
+                <div class="info-box">
+                    <h3 class="info-title"><i class="fas fa-users"></i> Usuários</h3>
+                    <div class="info-item">
+                        <i class="fas fa-user"></i>
+                        <span>Joao</span>
+                    </div>
+                    <div class="info-item admin-user">
+                        <i class="fas fa-user-shield"></i>
+                        <span>Admin</span>
+                        <span class="admin-username hidden">usuário_admin</span>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <h3 class="info-title"><i class="fas fa-key"></i> Senhas</h3>
+                    <div class="info-item">
+                        <i class="fas fa-lock"></i>
+                        <span>1234</span>
+                        <span class="user-password hidden">1234</span>
+                    </div>
+                    <div class="info-item admin-password">
+                        <i class="fas fa-lock"></i>
+                        <span>••••</span>
+                        <span class="admin-password-value hidden">1234</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="auth-form">
+                <h3><i class="fas fa-fingerprint"></i> Autenticação Requerida</h3>
+                <p>Para visualizar as credenciais de administrador, insira o código de segurança:</p>
+                
+                <div class="form-group">
+                    <label for="authCode">Código de Segurança:</label>
+                    <input type="password" id="authCode" placeholder="Digite o código de acesso">
+                </div>
+                
+                <button id="authButton"><i class="fas fa-unlock"></i> Verificar</button>
+                
+                <div id="errorAlert" class="alert alert-error">
+                    <i class="fas fa-exclamation-circle"></i> Código incorreto. Tente novamente.
+                </div>
+                
+                <div id="successAlert" class="alert alert-success">
+                    <i class="fas fa-check-circle"></i> Autenticação bem-sucedida! Credenciais reveladas.
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p><i class="fas fa-lock"></i> Sistema seguro | &copy; 2025 Acesso restrito</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const authButton = document.getElementById('authButton');
+            const authCodeInput = document.getElementById('authCode');
+            const errorAlert = document.getElementById('errorAlert');
+            const successAlert = document.getElementById('successAlert');
+            
+            // Código de segurança válido (na prática, isso deve ser verificado no servidor)
+            const validCode = "2023";
+            
+            authButton.addEventListener('click', function() {
+                const enteredCode = authCodeInput.value.trim();
+                
+                // Esconde os alerts anteriores
+                errorAlert.style.display = 'none';
+                successAlert.style.display = 'none';
+                
+                if (enteredCode === validCode) {
+                    // Autenticação bem-sucedida
+                    successAlert.style.display = 'block';
+                    
+                    // Revela as credenciais de admin
+                    document.querySelectorAll('.admin-username, .admin-password-value').forEach(el => {
+                        el.classList.remove('hidden');
+                        el.previousElementSibling.classList.add('hidden');
+                    });
+                    
+                    // Muda o ícone para aberto
+                    document.querySelectorAll('.admin-user i, .admin-password i').forEach(icon => {
+                        icon.classList.remove('fa-lock', 'fa-user-shield');
+                        icon.classList.add('fa-lock-open', 'fa-user-tie');
+                    });
+                    
+                    // Desabilita o formulário
+                    authCodeInput.disabled = true;
+                    authButton.disabled = true;
+                    authButton.innerHTML = '<i class="fas fa-check"></i> Autenticado';
+                    authButton.style.backgroundColor = 'var(--success-color)';
+                } else {
+                    // Código inválido
+                    errorAlert.style.display = 'block';
+                    authCodeInput.value = '';
+                    authCodeInput.focus();
+                }
+            });
+            
+            // Permitir autenticação ao pressionar Enter
+            authCodeInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    authButton.click();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
