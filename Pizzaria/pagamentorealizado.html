@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagamento Realizado</title>
+    <link rel="stylesheet" href="pagamento_realizado.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Pagamento Confirmado</h1>
+      <p>Seu pagamento foi realizado com sucesso!</p>
+    </header>
+
+    <main>
+      <div class="check-icon">
+        <!-- Ícone de confirmação (check verde) -->
+        <img src="https://www.silbeck.com.br/wp-content/uploads/2021/06/Prancheta-2@300x-100-scaled.jpg" alt="Pagamento confirmado" class="check-img">
+      </div>
+
+      <p>Obrigado pela sua compra! Seu pedido será processado e entregue em breve.</p>
+      
+      <button onclick="voltar()">Voltar para a loja</button>
+    </main>
+  </div>
+
+  <script>
+    // Função para voltar para a página principal
+    function voltar() {
+        window.location.href = "pizzaria.html"; // Alterar para o nome do arquivo da sua página principal
+    }
+  </script>
+</body>
+</html>

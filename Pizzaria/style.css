@@ -6,7 +6,7 @@
   font-family: 'Arial', sans-serif;
 }
 
-/* Corpo e fundo */
+/* Corpo */
 body {
   background-color: #fff8f0;
   color: #333;
@@ -28,13 +28,24 @@ header {
 
 .logo h1 {
   color: #e74c3c;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .logo p {
   color: #777;
   font-style: italic;
-  font-size: 1rem;
+  font-size: 0.9rem;
+}
+
+.logo-topo {
+  width: 40px;
+  cursor: pointer;
+}
+
+.logo-topo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 nav ul {
@@ -46,9 +57,8 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: #e74c3c;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 nav ul li a:hover {
@@ -63,111 +73,96 @@ nav ul li a:hover {
 #historia h2 {
   color: #e74c3c;
   margin-bottom: 15px;
-  font-size: 1.8rem;
 }
 
-#historia p {
-  margin-bottom: 15px;
-  font-size: 1.1rem;
-  max-width: 800px;
-}
-
-/* Imagem da seção história */
+/* Imagem de pizza centralizada */
 .pizza-img {
-  display: block;
   max-width: 100%;
   height: auto;
-  margin: 25px auto 0 auto;
+  margin-top: 20px;
   border-radius: 15px;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-  object-fit: cover;
+  box-shadow: 0 8px 15px rgba(255, 0, 0, 0.1);
 }
 
-/* Seção Menu */
-#menu {
-  margin-bottom: 50px;
+/* Classe extra para centralizar imagem */
+.pizza-img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* Menu */
 #menu h2 {
   color: #e74c3c;
-  font-size: 1.8rem;
-  margin-bottom: 25px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
-/* Container para os itens do menu */
-#menu .menu-item {
-  background-color: #fff;
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menu-item {
+  background: #fff;
   border-radius: 12px;
-  padding: 15px;
+  padding: 16px;
+  width: 300px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.07);
   text-align: center;
-  margin-bottom: 25px;
-  max-width: 320px;
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 15px;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s;
+  cursor: pointer;
 }
 
-#menu .menu-item:last-child {
-  margin-right: 0;
-}
-
-#menu .menu-item:hover {
+.menu-item:hover {
   transform: scale(1.05);
 }
 
-/* Imagens do menu */
 .menu-img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 12px 12px 0 0;
-  margin-bottom: 15px;
-}
-
-/* Títulos do menu */
-#menu h3 {
-  color: #c0392b;
+  border-radius: 12px;
   margin-bottom: 10px;
-  font-size: 1.3rem;
 }
 
-#menu p {
-  font-size: 1rem;
+.menu-item h3 {
+  color: #c0392b;
   margin-bottom: 8px;
+}
+
+.menu-item p {
+  font-size: 1rem;
+  margin-bottom: 5px;
   color: #555;
 }
 
-/* Preço */
-#menu span {
+.menu-item span {
   font-weight: bold;
   color: #e74c3c;
-  font-size: 1.1rem;
 }
 
-/* Seção Contato */
+/* Contato */
 #contato {
-  background-color: #fff4f0;
+  background: #fff4f0;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   max-width: 600px;
-  margin: 0 auto 50px auto;
+  margin: 50px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 #contato h2 {
+  text-align: center;
   color: #e74c3c;
   margin-bottom: 20px;
-  font-size: 1.8rem;
-  text-align: center;
 }
 
 #contato p {
   text-align: center;
-  margin-bottom: 25px;
-  font-size: 1.1rem;
+  margin-bottom: 20px;
 }
 
 #contato form {
@@ -177,19 +172,16 @@ nav ul li a:hover {
 
 #contato label {
   margin-bottom: 6px;
-  font-weight: 600;
-  color: #555;
+  font-weight: bold;
 }
 
 #contato input,
 #contato textarea {
   padding: 10px;
-  border: 1px solid #ddd;
   border-radius: 8px;
+  border: 1px solid #ddd;
   margin-bottom: 20px;
   font-size: 1rem;
-  resize: vertical;
-  transition: border-color 0.3s ease;
 }
 
 #contato input:focus,
@@ -199,49 +191,38 @@ nav ul li a:hover {
 }
 
 #contato button {
-  background-color: #e74c3c;
-  color: white;
-  font-weight: 700;
-  padding: 12px;
+  background: #e74c3c;
+  color: #fff;
   border: none;
-  border-radius: 8px;
+  padding: 12px;
   font-size: 1.1rem;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
 }
 
 #contato button:hover {
-  background-color: #c0392b;
+  background: #c0392b;
 }
 
 /* Rodapé */
 footer {
   text-align: center;
-  padding: 20px 10px;
-  background-color: #e74c3c;
+  padding: 20px;
+  background: #e74c3c;
   color: white;
-  font-weight: 600;
+  font-weight: bold;
   border-radius: 0 0 10px 10px;
 }
 
 /* Responsividade */
-@media (min-width: 768px) {
-  #menu {
-    text-align: center;
+@media (max-width: 768px) {
+  .menu-container {
+    flex-direction: column;
+    align-items: center;
   }
-  #menu .menu-item {
-    margin: 0 10px 25px 10px;
-  }
-  #menu .menu-item {
-    display: inline-block;
-    vertical-align: top;
-  }
-}
 
-@media (max-width: 767px) {
-  #menu .menu-item {
-    max-width: 100%;
-    display: block;
-    margin-right: 0 !important;
+  .menu-item {
+    width: 90%;
   }
 }

@@ -1,81 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Delgado's Pizzaria - As melhores pizzas feitas com amor!">
-    <title>Delgado's Pizzaria</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Delgado's Pizzaria - As melhores pizzas feitas com amor!"/>
+  <title>Delgado's Pizzaria</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header>
-        <div class="logo">
-            <h1>Delgado's Pizzaria</h1>
-            <p>As melhores pizzas feitas com amor!</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#historia">Nossa História</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">
+      <h1>Delgado's Pizzaria</h1>
+      <p>As melhores pizzas feitas com amor!</p>
+      <div class="logo-topo" onclick="window.location.href='login.html'">
+        <img src="delgado's.png" alt="Pizza deliciosa" />
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#historia">Nossa História</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section id="historia">
-        <h2>A História da Delgado's Pizzaria</h2>
-        <p>Tudo começou com uma festa de aniversário do filho de Ivanir Delgado. Ele preparou algumas pizzas para os amigos e vizinhos, e para sua surpresa, todos adoraram! O boca a boca fez o sucesso das suas pizzas se espalhar rapidamente pelo condomínio.</p>
-        <p><strong>"Vendemos 751 pizzas no primeiro mês, e tudo sem nenhuma divulgação formal, apenas a recomendação dos próprios clientes",</strong> relembra Ivanir com entusiasmo.</p>
-        <p>Foi assim que surgiu a Delgado's Pizzaria: um lugar onde a paixão por fazer pizza se transforma em um verdadeiro sucesso, conquistando o coração de quem prova. E o melhor: isso é só o começo!</p>
-        
-        <img src="delgado's.png" alt="Pizza deliciosa" class="pizza-img">
-    </section>
+  <!-- Seção História -->
+  <section id="historia">
+    <h2>A História da Delgado's Pizzaria</h2>
+    <p>Tudo começou com uma festa de aniversário do filho de Ivanir Delgado. Ele preparou algumas pizzas para os amigos e vizinhos, e para sua surpresa, todos adoraram!</p>
+    <p><strong>"Vendemos 751 pizzas no primeiro mês, e tudo sem nenhuma divulgação formal",</strong> relembra Ivanir com entusiasmo.</p>
+    <p>Foi assim que surgiu a Delgado's Pizzaria: um lugar onde a paixão por fazer pizza se transforma em sucesso.</p>
+   <img src="delgado's.png" alt="Pizza deliciosa" class="pizza-img center">
+  </section>
 
-    <!-- Seção de Menu -->
-    <section id="menu">
-        <h2>Nosso Menu:</h2>
-        <div class="menu-item" onclick="window.location.href='margherita.html'">
-            <img src="https://www.foodandwine.com/thmb/7A7CYdDEKJUUhNcLSrlZ5N8wbHo=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/mozzarella-pizza-margherita-FT-RECIPE0621-11fa41ceb1a5465d9036a23da87dd3d4.jpg" alt="Pizza Margherita" class="menu-img">
-            <h3>Pizza Margherita</h3>
-            <p>Molho de tomate, queijo mozzarella, manjericão fresco e azeite de oliva.</p>
-            <span>R$ 72,90</span>
-        </div>
-        <div class="menu-item" onclick="window.location.href='calabresa.html'">
-            <img src="https://blog.biglar.com.br/wp-content/uploads/2023/06/iStock-1212512019.jpg" alt="Pizza Calabresa" class="menu-img">
-            <h3>Pizza Calabresa</h3>
-            <p>Calabresa, cebola, molho de tomate, queijo mozzarella.</p>
-            <span>R$ 74,90</span>
-        </div>
-        <div class="menu-item" onclick="window.location.href='4queijos.html'">
-            <img src="https://i0.wp.com/alimentos10.com.br/wp-content/uploads/2023/06/imeretian-khachapuri-cheese-lemon-side-view-1.jpg" alt="Pizza Quatro Queijos" class="menu-img">
-            <h3>Pizza Quatro Queijos</h3>
-            <p>Queijo mozzarella, queijo gorgonzola, parmesão e queijo provolone.</p>
-            <span>R$ 79,90</span>
-        </div>
-    </section>
+  <!-- Seção Menu -->
+  <section id="menu">
+    <h2>Nosso Menu:</h2>
+    <div class="menu-container">
+      <div class="menu-item" onclick="window.location.href='margherita.html'">
+        <img src="https://www.foodandwine.com/thmb/7A7CYdDEKJUUhNcLSrlZ5N8wbHo=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/mozzarella-pizza-margherita-FT-RECIPE0621-11fa41ceb1a5465d9036a23da87dd3d4.jpg" alt="Pizza Margherita" class="menu-img" />
+        <h3>Pizza Margherita</h3>
+        <p>Molho de tomate, queijo mozzarella, manjericão fresco e azeite de oliva.</p>
+        <span>R$ 72,90</span>
+      </div>
 
-    <!-- Seção de Contato -->
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>Quer saber mais ou fazer seu pedido? Entre em contato conosco!</p>
-        <form action="#">
-            <label for="nome">Seu Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-            
-            <label for="email">Seu Email:</label>
-            <input type="email" id="email" name="email" required>
+      <div class="menu-item" onclick="window.location.href='calabresa.html'">
+        <img src="https://blog.biglar.com.br/wp-content/uploads/2023/06/iStock-1212512019.jpg" alt="Pizza Calabresa" class="menu-img" />
+        <h3>Pizza Calabresa</h3>
+        <p>Calabresa, cebola, molho de tomate, queijo mozzarella.</p>
+        <span>R$ 74,90</span>
+      </div>
 
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" required></textarea>
+      <div class="menu-item" onclick="window.location.href='4queijos.html'">
+        <img src="https://i0.wp.com/alimentos10.com.br/wp-content/uploads/2023/06/imeretian-khachapuri-cheese-lemon-side-view-1.jpg" alt="Pizza Quatro Queijos" class="menu-img" />
+        <h3>Pizza Quatro Queijos</h3>
+        <p>Queijo mozzarella, gorgonzola, parmesão e provolone.</p>
+        <span>R$ 79,90</span>
+      </div>
+    </div>
+  </section>
 
-            <button type="submit">Enviar Mensagem</button>
-        </form>
-    </section>
+  <!-- Seção Contato -->
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Quer saber mais ou fazer seu pedido? Entre em contato conosco!</p>
+    <form action="#">
+      <label for="nome">Seu Nome:</label>
+      <input type="text" id="nome" name="nome" required />
 
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2025 Delgado's Pizzaria. Todos os direitos reservados.</p>
-    </footer>
+      <label for="email">Seu Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" required></textarea>
+
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Delgado's Pizzaria. Todos os direitos reservados.</p>
+  </footer>
 </body>
-</html>  
+</html>

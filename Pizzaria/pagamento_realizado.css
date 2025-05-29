@@ -1,0 +1,94 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container principal */
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #e74c3c; /* Vermelho */
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Imagem do Check (após pagamento realizado) */
+.check-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.check-img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Parágrafos principais */
+p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Estilo do botão */
+button {
+    background-color: #e74c3c; /* Vermelho */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+/* QR Code - área de pagamento (caso use no futuro) */
+.qr-code {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.qr-code img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: block; /* Centraliza a imagem */
+}
+
+.qr-code p {
+    font-size: 1rem;
+    color: #555;
+}

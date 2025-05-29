@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pedido - Pizza Calabresa</title>
+  <link rel="stylesheet" href="compra.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Delgado's Pizzaria</h1>
+      <p>Finalize seu pedido</p>
+    </header>
+
+    <main class="produto">
+      <!-- Imagem do produto -->
+      <div class="produto-imagem">
+        <img src="https://blog.biglar.com.br/wp-content/uploads/2023/06/iStock-1212512019.jpg" alt="Pizza Calabresa" class="pizza-img">
+      </div>
+
+      <!-- Detalhes do produto -->
+      <div class="detalhes">
+        <h2>Pizza Calabresa</h2>
+        <p>Molho de tomate, queijo mozzarella, calabresa fatiada, cebola e azeitonas.</p>
+        <p class="preco">R$ 74  ,90</p>
+
+        <!-- Formulário de quantidade, pagamento e observações -->
+        <div class="formulario">
+          <label for="quantidade">Quantidade:</label>
+          <input type="number" id="quantidade" min="1" value="1">
+
+          <label for="pagamento">Forma de pagamento:</label>
+          <select id="pagamento">
+            <option value="pix">PIX</option>
+            <option value="credito">Cartão de Crédito</option>
+            <option value="debito">Cartão de Débito</option>
+            <option value="dinheiro">Dinheiro (troco para?)</option>
+          </select>
+
+          <label for="obs">Observações (ex: sem cebola, troco para R$100):</label>
+          <textarea id="obs" rows="3" placeholder="Digite aqui..."></textarea>
+
+          <!-- Exibição do total -->
+          <p id="valorTotal">Total: R$ 72,90</p>
+        </div>
+
+        <!-- Botão de confirmação do pedido -->
+        <button onclick="confirmarCompra()">Confirmar Pedido</button>
+        <p id="mensagem"></p>
+      </div>
+    </main>
+  </div>
+
+  <script src="compra.js"></script>
+</body>
+</html>

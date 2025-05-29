@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #fff8f0;
+  color: #333;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #e74c3c;
+  font-size: 2rem;
+}
+
+header p {
+  font-style: italic;
+  color: #777;
+}
+
+.produto {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.pizza-img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  max-height: 400px;
+}
+
+.detalhes {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.detalhes h2 {
+  color: #e74c3c;
+  font-size: 1.6rem;
+}
+
+.detalhes .preco {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #c0392b;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #c0392b;
+}
+
+#mensagem {
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .produto {
+    padding: 15px;
+  }
+
+  .pizza-img {
+    max-height: 250px;
+  }
+}

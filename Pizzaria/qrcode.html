@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagamento - PIX</title>
+    <link rel="stylesheet" href="pagamento_pix.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Pagamento via PIX</h1>
+      <p>Escaneie o QR Code abaixo para concluir seu pagamento.</p>
+    </header>
+
+    <main>
+      <div class="qr-code">
+        <!-- Exemplo de QR Code genérico (substitua pelo seu código real do PIX) -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Link_pra_pagina_principal_da_Wikipedia-PT_em_codigo_QR_b.svg" alt="QR Code PIX" />
+        <p>Ou copie o código abaixo para fazer o pagamento:</p>
+        <p><strong>Chave PIX:(19)97420-1385 </strong></p>
+      </div>
+
+      <button onclick="voltar()">Voltar para a loja</button>
+    </main>
+  </div>
+
+  <script>
+    // Função para voltar para a página anterior ou principal
+    function voltar() {
+        window.location.href = "pizzaria.html"; // Alterar para o nome do arquivo da sua página principal
+    }
+
+    // Função para redirecionar após 10 segundos
+    setTimeout(function() {
+        window.location.href = "pagamentorealizado.html"; // Redireciona para a página de pagamento realizado
+    }, 10000); // 10000 milissegundos = 10 segundos
+  </script>
+</body>
+</html>

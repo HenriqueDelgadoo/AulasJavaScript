@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Delgado's Pizzaria - As melhores pizzas artesanais feitas com ingredientes frescos e muito amor!"/>
+  <meta name="keywords" content="pizzaria, pizza, delivery, comida italiana, pizzas artesanais">
+  <title>Delgado's Pizzaria | Pizzas Artesanais de Qualidade</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Cabeçalho com banner -->
+  <header>
+    <div class="header-banner">
+      <div class="container">
+        <div class="logo-container">
+          <div class="logo">
+            <img src="delgados-logo.png" alt="Delgado's Pizzaria" class="logo-img">
+            <div class="logo-text">
+              <h1>Delgado's Pizzaria</h1>
+              <p class="slogan">As melhores pizzas feitas com amor!</p>
+            </div>
+          </div>
+          <div class="header-cta">
+            <a href="tel:+5511999999999" class="phone-link">
+              <i class="fas fa-phone-alt"></i> (11) 99999-9999
+            </a>
+            <button class="order-btn" onclick="window.location.href='pedidos.html'">
+              <i class="fas fa-shopping-cart"></i> Faça seu pedido
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <nav class="main-nav">
+      <div class="container">
+        <ul>
+          <li><a href="#home"><i class="fas fa-home"></i> Início</a></li>
+          <li><a href="#historia"><i class="fas fa-history"></i> Nossa História</a></li>
+          <li><a href="#menu"><i class="fas fa-pizza-slice"></i> Cardápio</a></li>
+          <li><a href="#promocoes"><i class="fas fa-tag"></i> Promoções</a></li>
+          <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
+          <li><a href="login.html" class="login-link"><i class="fas fa-user"></i> Login</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Seção Hero -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h2>Pizzas Artesanais Feitas com Paixão</h2>
+        <p>Experimente nossas delícias com massa fermentada naturalmente e ingredientes selecionados</p>
+        <div class="hero-buttons">
+          <a href="#menu" class="btn-primary">Ver Cardápio</a>
+          <a href="pedidos.html" class="btn-secondary">Pedir Agora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção História -->
+  <section id="historia" class="section-history">
+    <div class="container">
+      <div class="section-header">
+        <h2>A História da Delgado's Pizzaria</h2>
+        <p class="section-subtitle">Nossa paixão por pizza começou em uma simples festa de família</p>
+      </div>
+      
+      <div class="history-content">
+        <div class="history-text">
+          <p>Tudo começou com uma festa de aniversário do filho de Ivanir Delgado. Ele preparou algumas pizzas para os amigos e vizinhos, e para sua surpresa, todos adoraram!</p>
+          <blockquote>
+            "Vendemos 751 pizzas no primeiro mês, e tudo sem nenhuma divulgação formal"
+            <cite>Ivanir Delgado, Fundador</cite>
+          </blockquote>
+          <p>Foi assim que surgiu a Delgado's Pizzaria: um lugar onde a paixão por fazer pizza se transforma em sucesso. Hoje mantemos a mesma receita artesanal e o cuidado com cada detalhe que nos fez crescer.</p>
+          
+          <div class="history-stats">
+            <div class="stat-item">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Anos de Experiência</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5000+</span>
+              <span class="stat-label">Clientes Satisfeitos</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Sabores Diferentes</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="history-image">
+          <img src="pizza-making.jpg" alt="Preparo de pizza artesanal" class="pizza-img">
+          <div class="image-badge">
+            <span>Desde 2010</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Menu -->
+  <section id="menu" class="section-menu">
+    <div class="container">
+      <div class="section-header">
+        <h2>Nosso Cardápio</h2>
+        <p class="section-subtitle">Sabores que vão te surpreender</p>
+      </div>
+      
+      <div class="menu-filters">
+        <button class="filter-btn active" data-category="all">Todos</button>
+        <button class="filter-btn" data-category="classicas">Clássicas</button>
+        <button class="filter-btn" data-category="especiais">Especiais</button>
+        <button class="filter-btn" data-category="doces">Doces</button>
+      </div>
+      
+      <div class="menu-container">
+        <!-- Pizza Margherita -->
+        <div class="menu-item" data-category="classicas">
+          <div class="menu-item-img">
+            <img src="margherita.jpg" alt="Pizza Margherita">
+            <span class="price-tag">R$ 72,90</span>
+            <div class="item-badge">Mais Pedida</div>
+          </div>
+          <div class="menu-item-content">
+            <h3>Margherita</h3>
+            <p>Molho de tomate artesanal, queijo mozzarella de búfala, manjericão fresco e azeite de oliva extra virgem.</p>
+            <div class="menu-item-footer">
+              <span class="rating">
+                <i class="fas fa-star"></i> 4.9 (128)
+              </span>
+              <button class="add-to-cart" data-item="Margherita">
+                <i class="fas fa-plus"></i> Adicionar
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Pizza Calabresa -->
+        <div class="menu-item" data-category="classicas">
+          <div class="menu-item-img">
+            <img src="calabresa.jpg" alt="Pizza Calabresa">
+            <span class="price-tag">R$ 74,90</span>
+          </div>
+          <div class="menu-item-content">
+            <h3>Calabresa</h3>
+            <p>Calabresa artesanal, cebola roxa, molho de tomate especial e queijo mozzarella derretido.</p>
+            <div class="menu-item-footer">
+              <span class="rating">
+                <i class="fas fa-star"></i> 4.7 (95)
+              </span>
+              <button class="add-to-cart" data-item="Calabresa">
+                <i class="fas fa-plus"></i> Adicionar
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Pizza 4 Queijos -->
+        <div class="menu-item" data-category="classicas">
+          <div class="menu-item-img">
+            <img src="4queijos.jpg" alt="Pizza Quatro Queijos">
+            <span class="price-tag">R$ 79,90</span>
+          </div>
+          <div class="menu-item-content">
+            <h3>Quatro Queijos</h3>
+            <p>Combinação premium de queijo mozzarella, gorgonzola, parmesão e provolone derretidos.</p>
+            <div class="menu-item-footer">
+              <span class="rating">
+                <i class="fas fa-star"></i> 4.8 (112)
+              </span>
+              <button class="add-to-cart" data-item="4 Queijos">
+                <i class="fas fa-plus"></i> Adicionar
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Adicione mais itens do menu aqui -->
+      </div>
+      
+      <div class="menu-cta">
+        <a href="cardapio-completo.html" class="btn-outline">
+          <i class="fas fa-book-open"></i> Ver Cardápio Completo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Promoções -->
+  <section id="promocoes" class="section-promo">
+    <div class="container">
+      <div class="section-header">
+        <h2>Promoções Especiais</h2>
+        <p class="section-subtitle">Aproveite nossas ofertas por tempo limitado</p>
+      </div>
+      
+      <div class="promo-slider">
+        <!-- Slide 1 -->
+        <div class="promo-slide active">
+          <div class="promo-card">
+            <div class="promo-img">
+              <img src="promo1.jpg" alt="Promoção 2 pizzas">
+              <div class="promo-badge">-30%</div>
+            </div>
+            <div class="promo-content">
+              <h3>Combo Família</h3>
+              <p>2 pizzas grandes + 1 refrigerante 2L</p>
+              <div class="price-container">
+                <span class="old-price">R$ 149,80</span>
+                <span class="new-price">R$ 104,90</span>
+              </div>
+              <button class="btn-promo">Aproveitar Oferta</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Adicione mais slides aqui -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Depoimentos -->
+  <section class="section-testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2>O que nossos clientes dizem</h2>
+        <p class="section-subtitle">A satisfação dos nossos clientes é nossa maior recompensa</p>
+      </div>
+      
+      <div class="testimonials-grid">
+        <!-- Depoimento 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="cliente1.jpg" alt="Cliente Maria Silva" class="client-img">
+            <div class="client-info">
+              <h4>Maria Silva</h4>
+              <div class="client-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-content">
+            <p>"A melhor pizza que já comi! A massa é perfeita, crocante por fora e macia por dentro. O atendimento é excelente e sempre chega no prazo."</p>
+          </div>
+        </div>
+        
+        <!-- Adicione mais depoimentos aqui -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Contato -->
+  <section id="contato" class="section-contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Entre em Contato</h2>
+          <p>Tem dúvidas, sugestões ou quer fazer seu pedido? Fale conosco!</p>
+          
+          <div class="contact-methods">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Endereço</h4>
+                <p>Rua das Pizzas, 123 - Centro, São Paulo - SP</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <div>
+                <h4>Telefone</h4>
+                <p>(11) 99999-9999</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p>contato@delgadospizzaria.com.br</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h4>Horário de Funcionamento</h4>
+                <p>Terça a Domingo: 18h - 23h<br>Sexta e Sábado: 18h - 00h</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <form id="contactForm" action="#" method="POST">
+            <div class="form-group">
+              <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+            </div>
+            
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Seu melhor email" required>
+            </div>
+            
+            <div class="form-group">
+              <input type="tel" id="telefone" name="telefone" placeholder="Seu telefone">
+            </div>
+            
+            <div class="form-group">
+              <select id="assunto" name="assunto" required>
+                <option value="" disabled selected>Selecione o assunto</option>
+                <option value="duvida">Dúvida</option>
+                <option value="pedido">Pedido Especial</option>
+                <option value="reclamacao">Reclamação</option>
+                <option value="elogio">Elogio</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit">
+              <i class="fas fa-paper-plane"></i> Enviar Mensagem
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mapa -->
+  <section class="section-map">
+    <div class="container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0754267452926!2d-46.65342658447571!3d-23.565734367638794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1629917971581!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="delgados-logo-white.png" alt="Delgado's Pizzaria" class="footer-logo">
+          <p>As melhores pizzas artesanais feitas com ingredientes frescos e muito amor desde 2010.</p>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#menu">Cardápio</a></li>
+            <li><a href="#promocoes">Promoções</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Horário de Funcionamento</h4>
+          <ul class="opening-hours">
+            <li>Terça a Quinta: 18h - 23h</li>
+            <li>Sexta e Sábado: 18h - 00h</li>
+            <li>Domingo: 18h - 22h</li>
+            <li>Segunda: Fechado</li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>Assine e receba nossas promoções exclusivas!</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Seu email" required>
+            <button type="submit">Assinar</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="copyright">
+          &copy; 2025 Delgado's Pizzaria. Todos os direitos reservados.
+        </div>
+        
+        <div class="payment-methods">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-paypal"></i>
+          <i class="fab fa-cc-amazon-pay"></i>
+        </div>
+      </div>
+    </div>
+    
+    <a href="#home" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
