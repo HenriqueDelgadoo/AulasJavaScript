@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Pizzaria</title>
     <link rel="stylesheet" href="cadastro.css">
-    <title>Cadastro</title>
 </head>
 <body>
-    <div>
     <header>
         <div class="logo-container">
             <h1>Delgado's Pizzaria</h1>
@@ -15,27 +14,27 @@
         </div>
         <img onclick="window.location.href='login.html'" src="delgado's.png" alt="Logo pizzaria" id="logo-topo" />
     </header>
-    <div id="info" class="hidden">
-        <label for="email">Digite seu email:</label>
-        <input type="text" id="email" placeholder="Digite seu email">
-        <label for="usuario">Digite seu usuário:</label>
-        <input type="text" id="usuario" placeholder="Digite seu usuário">
-        <label for="endereco">Digite seu endereço (com número):</label>
-        <input type="text" id="endereco" placeholder="Digite seu endereço">
-        <label for="numero">Digite seu número:</label>
-        <input type="number" id="numero" placeholder="Digite seu número">
-        <label for="senha">Digite sua senha:</label>
-        <input type="password" id="senha" placeholder="Digite sua senha">
-        <label for="csenha">Confirme sua senha:</label>
-        <input type="password" id="csenha" placeholder="confirme sua senha">
-    </div>
-    <div>
-        <button onclick="cadastro()">Cadastrar-se</button>
-    </div>
-    <div>
-        <p id="mensagem"></p>
-    </div>
-    </div>
+    <main>
+        <div id="formulario-cadastro" class = "cadastro">
+            <label for="email">Email:</label>
+            <input type="text" id="email" placeholder="Digite seu email">
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" placeholder="Digite seu usuário">
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" placeholder="Digite seu endereço completo">
+            <label for="numero">Número:</label>
+            <input type="number" id="numero" placeholder="Digite seu número">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" placeholder="Digite sua senha">
+            <label for="csenha">Confirme sua senha:</label>
+            <input type="password" id="csenha" placeholder="Confirme sua senha">
+            <button onclick="cadastro()">Cadastrar-se</button>
+            <button onclick="window.location.href='login.html'">Voltar ao login</button>
+
+            <p id="mensagem"></p>
+        </div>
+    </main>
+
     <script src="cadastro.js"></script>
 </body>
 </html>

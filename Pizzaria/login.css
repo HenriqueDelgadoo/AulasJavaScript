@@ -19,7 +19,7 @@ body {
 
 /* Logo no canto superior direito */
 #logo-topo {
-    position: absolute;
+    position: center;
     top: 20px;
     right: 20px;
     max-width: 120px;

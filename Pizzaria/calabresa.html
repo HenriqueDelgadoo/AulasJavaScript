@@ -14,18 +14,18 @@
     </header>
 
     <main class="produto">
-      <!-- Imagem do produto -->
+      
       <div class="produto-imagem">
         <img src="https://blog.biglar.com.br/wp-content/uploads/2023/06/iStock-1212512019.jpg" alt="Pizza Calabresa" class="pizza-img">
       </div>
 
-      <!-- Detalhes do produto -->
+      
       <div class="detalhes">
         <h2>Pizza Calabresa</h2>
         <p>Molho de tomate, queijo mozzarella, calabresa fatiada, cebola e azeitonas.</p>
         <p class="preco">R$ 74  ,90</p>
 
-        <!-- Formulário de quantidade, pagamento e observações -->
+        
         <div class="formulario">
           <label for="quantidade">Quantidade:</label>
           <input type="number" id="quantidade" min="1" value="1">
@@ -41,12 +41,13 @@
           <label for="obs">Observações (ex: sem cebola, troco para R$100):</label>
           <textarea id="obs" rows="3" placeholder="Digite aqui..."></textarea>
 
-          <!-- Exibição do total -->
-          <p id="valorTotal">Total: R$ 72,90</p>
+          
+          <p id="valorTotal">Total: R$ 74,90</p>
         </div>
 
-        <!-- Botão de confirmação do pedido -->
+        
         <button onclick="confirmarCompra()">Confirmar Pedido</button>
+        <button onclick="window.location.href = 'pizzaria.html'">Voltar</button>
         <p id="mensagem"></p>
       </div>
     </main>

@@ -64,6 +64,16 @@ nav ul li a {
 nav ul li a:hover {
   color: #c0392b;
 }
+nav button {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
 
 /* Seção História */
 #historia {

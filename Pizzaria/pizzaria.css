@@ -20,6 +20,7 @@ header {
     border-radius: 8px;
     margin-bottom: 20px;
 }
+
 /* Logo no canto superior direito */
 #logo-topo {
     position: absolute;
@@ -29,6 +30,7 @@ header {
     height: auto;
     z-index: 1000;
 }
+
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -52,7 +54,7 @@ header {
 
 .menu button {
     padding: 10px 15px;
-    background-color: #fff;
+    background-color: #ffffff;
     border: none;
     color: #e74c3c;
     font-weight: bold;
@@ -62,7 +64,7 @@ header {
 }
 
 .menu button:hover {
-    background-color: #f2c2bc;
+    background-color:  #d4edda;
 }
 
 /* Seções */
@@ -92,7 +94,7 @@ input[type="number"],
 input[type="file"],
 textarea {
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid  #d4edda;
     border-radius: 6px;
     width: 100%;
 }
@@ -100,7 +102,7 @@ textarea {
 /* Botões */
 button {
     padding: 10px;
-    background-color: #ffffff;
+    background-color:  #d4edda;
     color: rgb(87, 4, 4);
     border: none;
     border-radius: 6px;
@@ -121,7 +123,7 @@ table {
 }
 
 table, th, td {
-    border: 1px solid #ccc;
+    border: 1px solid  #d4edda;
 }
 
 th, td {
@@ -130,13 +132,55 @@ th, td {
 }
 
 th {
-    background-color: #f9e6e1;
+    background-color:  #d4edda;
     color: #e74c3c;
+}
+
+/* Lista de Pizzas */
+ul.lista-pizzas {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+    background-color: #fff;
+    border: 1px solid #d4edda;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+ul.lista-pizzas li {
+    padding: 12px 15px;
+    border-bottom: 1px solid #d4edda;
+    font-size: 16px;
+    color: #333;
+}
+
+ul.lista-pizzas li:last-child {
+    border-bottom: none;
+}
+
+ul.lista-pizzas li:hover {
+    background-color: #fff0f0;
+    cursor: default;
 }
 
 /* Esconder seções por padrão */
 .hidden {
     display: none;
+}
+
+/* Mensagens */
+.sucesso {
+  color: green;
+  font-weight: bold;
+}
+
+.erro {
+  color: red;
+  font-weight: bold;
+}
+
+.mensagem-hidden {
+  display: none;
 }
 
 /* Responsivo */
@@ -154,17 +198,4 @@ th {
     .logo {
         align-self: flex-end;
     }
-}
-.sucesso {
-  color: green;
-  font-weight: bold;
-}
-
-.erro {
-  color: red;
-  font-weight: bold;
-}
-
-.mensagem-hidden {
-  display: none;
 }

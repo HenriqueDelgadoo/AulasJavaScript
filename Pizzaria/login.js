@@ -13,12 +13,22 @@ function validarLogin() {
     const usuario = document.getElementById("usuario").value.trim();
     const senha = document.getElementById("senha").value.trim();
 
-    if (usuario === "admin" && senha === "1234") {
+    const usuarios = JSON.parse(sessionStorage.getItem("usuarios")) || [];
+
+    
+    if ((usuario === "admin" && senha === "1234") ||
+        (usuario.toLowerCase() === "joao" && senha === "1234")) {
         exibirMensagem("Login realizado com sucesso", "sucesso");
         setTimeout(() => {
-            window.location.href = "pizzaria1.html";
+            window.location.href = (usuario === "admin") ? "pizzaria1.html" : "pizzaria.html";
         }, 1000);
-    } else if (usuario.toLowerCase() === "joao" && senha === "1234") {
+        return;
+    }
+
+    
+    const usuarioEncontrado = usuarios.find(u => u.usuario === usuario && u.senha === senha);
+
+    if (usuarioEncontrado) {
         exibirMensagem("Login realizado com sucesso", "sucesso");
         setTimeout(() => {
             window.location.href = "pizzaria.html";
