@@ -5,8 +5,247 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Delgado's Pizzaria - As melhores pizzas feitas com amor!"/>
   <title>Delgado's Pizzaria</title>
-  <link rel="stylesheet" href="style.css" />
+ 
 </head>
+<style>/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Corpo */
+body {
+  background-color: #fff8f0;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e74c3c;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.logo h1 {
+  color: #e74c3c;
+  font-size: 1.8rem;
+}
+
+.logo p {
+  color: #777;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.logo-topo {
+  width: 40px;
+  cursor: pointer;
+}
+
+.logo-topo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #e74c3c;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #c0392b;
+}
+nav button {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Seção História */
+#historia {
+  margin-bottom: 50px;
+}
+
+#historia h2 {
+  color: #e74c3c;
+  margin-bottom: 15px;
+}
+
+/* Imagem de pizza centralizada */
+.pizza-img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(255, 0, 0, 0.1);
+}
+
+/* Classe extra para centralizar imagem */
+.pizza-img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Menu */
+#menu h2 {
+  color: #e74c3c;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menu-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+  text-align: center;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+}
+
+.menu-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.menu-item h3 {
+  color: #c0392b;
+  margin-bottom: 8px;
+}
+
+.menu-item p {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.menu-item span {
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+/* Contato */
+#contato {
+  background: #fff4f0;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 50px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+#contato h2 {
+  text-align: center;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+#contato p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#contato form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contato label {
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+#contato input,
+#contato textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+#contato input:focus,
+#contato textarea:focus {
+  border-color: #e74c3c;
+  outline: none;
+}
+
+#contato button {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#contato button:hover {
+  background: #c0392b;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #e74c3c;
+  color: white;
+  font-weight: bold;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-item {
+    width: 90%;
+  }
+}
+</style>
 <body>
   <!-- Cabeçalho -->
   <header>
