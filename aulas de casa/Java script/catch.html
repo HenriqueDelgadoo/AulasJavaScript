@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Teste Try Catch</title>
+</head>
+<body>
+  <h2>Teste de Try...Catch...Finally</h2>
+  <button onclick="testarErro()">Testar Erro</button>
+
+  <script>
+    function testarErro() {
+      try {
+        console.log("Consultando o banco de dados...");
+        throw new Error("Erro 1032 ao conectar com o banco de dados.");
+      } catch (error) {
+        console.log("Entrou no catch!"); // debug
+        alert("⚠️ Erro genérico: por favor, fale com o suporte.");
+        console.error("Detalhes do erro:", error);
+      } finally {
+        console.log("Bloco finally executado.");
+      }
+    }
+  </script>
+</body>
+</html>

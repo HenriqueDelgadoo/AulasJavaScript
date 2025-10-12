@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <script>
+
+        //indices conmeçam do 0 
+
+        const person = ["Felipe", "Ana", "Paulo"] // cria  a array com todos os nomes
+        person [0] = "Pedro" // sobrescreve o nome do indice 0 
+        person[5] = "José" // cria o indice 5 que não existia (cuidado não é uma boa prática)
+
+        const persons = [{ // dentro do array é comum criar objetos
+        name: "Henrique", age : 20},
+        {name: "Gabriel", age: 21},
+        {name: "Beatriz", age: 18},
+        ]
+
+        // const person1 ="Felipe"
+        // const person2 = "Ana"
+        // const person3 = "Paulo"
+        
+        // console.log(person1)
+        // console.log(person2)
+        // console.log(person3)
+
+        console.log(person[0]) // retorna o indice 0 da array (o primeiro nome)
+        console.log(person.length) //quantos elementos estão na lista
+
+        console.log(persons[0])
+
+
+    </script>
+</html>

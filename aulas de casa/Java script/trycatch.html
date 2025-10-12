@@ -1,0 +1,23 @@
+<html>
+    <meta charset="UTF-8">
+    <script>
+//trycatch tentar capturar, usado para interagir com erros de comunição com outros serviços (externos)
+
+try{
+    //executa algo...
+    //consulta de API, Banco de dados, arquivos
+    console.log("Consultando o banco de dados ...")
+    // console.select("clientes") // ponto de falhas
+    throw "Erro 1032 ao conectar com o banco de dados."
+}catch(error){
+    //erro
+    alert('Erro de execução genérico. Por favor, fale com o suporte.')
+    console.error(error) // mostra de fato o erro no console
+}finally{
+    //sempre executa ao final (opcional)
+    console.log("Execução final")
+}
+    </script>
+</html>
+
+
