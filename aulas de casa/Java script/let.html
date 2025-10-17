@@ -1,0 +1,18 @@
+<html>
+    <script>
+        //let deixa as variáveis "privadas" ao escopo declarado, diferente do var.
+
+        let x = 10; 
+        console.log("x",x)
+        //escopos são espaços em que podem ter loógicas (decisões, iterpretações ou funções)
+        //usa-se a abertura de chaves ("{}"), para representar o escopo
+
+        {
+            console.log("x",x) 
+            x = 20 
+            let y = 30 // declara a variável dentro do escopo local
+        }
+        console.log("x",x)
+        console.log("y",y)  // diferente do var, ele foi declarado somente no escopo local.
+    </script>
+</html>

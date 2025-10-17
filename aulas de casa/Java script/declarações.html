@@ -1,0 +1,30 @@
+<html>
+    <script>
+        let x
+        console.log("x",x) //undefined
+
+        x = 10
+        console.log("x",x) //  10
+
+        let y = 20;
+        console.log ("y", y) // 20
+
+        let name = "henrique", age = 20, addres = {
+            street: " rua das rosas",
+            city: "São paulo"
+        }
+
+        console.log("name", name)
+
+        /*concatenação e iterpolação
+        entenda, java script não consegue exibir um objeto como se fosse uma variável.
+        Ultilize o comando " JSON.stringify()" ela transforma o objeto em JSON*/
+
+        console.log (name + " tem " + age + " anos. E reside em " + JSON.stringify (addres)) // concatenação
+
+        console.log (`${name} tem age ${anos + 1} e reside em ${JSON.stringify(addres)}`)  // interpolação, usa-se crase  ``
+    </script>
+</html>
+
+O JSON organiza os dados em pares chave-valor, para facilitar a leitura do 
+objeto tanto para a maquina quanto para nós humanos.

@@ -1,4 +1,4 @@
-// função filter
+// função filter, filtra os elementos do array
 
 const numbers = [2, 10 , 18 , 20]
 

@@ -1,0 +1,26 @@
+//  Robo trocador de lâmpada, precisa subir a escada e trocar a lâmpada.
+
+//  1 -  receber input para trocar a lampada (botão, ligar, ou lâmpada queimada)
+//     se(botão == true){
+//         function trocarLampada()
+//     }else if (lâmpada == queimada){
+//          function trocarLampada()
+//     }else{
+//      Não fazer nada!}
+
+// 2 - Pegar a lampada;
+// 3 - se (escada no lugar)
+//     subir escada
+//     else (pedir para colocar escada no devido lugar)
+// 4 - enquanto (não chegar ao fim da escada)
+//      subir
+// 5 - localizar lampada
+// 6 - retirar lampada
+// 7 - testar a lampada
+// 8 -  se (lampada queimada)
+//        trocar a lampada
+//      else 
+//          avisar operador
+// 9 -  Enquanto (não chegar ao chão)
+//          descer da escada
+// 10 - voltar ao posto de trabalho

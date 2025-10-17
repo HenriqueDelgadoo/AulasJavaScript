@@ -1,0 +1,37 @@
+<html>
+    <meta charset="UTF-8">
+    <script>
+  function mult(n){
+    n*= n
+    return n
+  }
+  let n = 10
+  console.log(mult(n))
+
+  // variaveis que não são objetos são passadas apenas os valores delas. Já com objetos são passsados com referência, ou seja é alterado o valor do atributo tanto na função quanto fora dela
+
+  const num = {value : 10}
+
+  function mul(num){
+    num.value *= num.value
+    return num
+  }
+
+  console.log(mul(num))
+  console.log(num)
+
+  // escopo da função: Quando const = função se chamar antes da linha da função apresenta erro, no mais da tudo certo.
+
+  // Arrow functions: substituir a palavra "function" por uma setinha =>
+
+  const mult = (n) => {
+    n*= n
+    return n
+  }
+
+  console.log(mult(10))
+
+
+
+    </script>
+</html>

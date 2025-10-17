@@ -1,4 +1,4 @@
-// função map, retorna um array manipulado em cada elemento
+// função map, retorna um array manipulado em cada elemento. mapeia cada elemento do array
 
 const numbers = [1,2,3,4,5]
 
@@ -18,3 +18,4 @@ const people = [{
 
 const nomeNomalizado = people.map((p) =>  p.name.toLowerCase())
 console.log(nomeNomalizado)
+

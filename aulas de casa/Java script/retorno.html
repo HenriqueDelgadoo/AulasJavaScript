@@ -1,0 +1,26 @@
+<html>
+    <script>
+// function soma (n1, n2){  
+//     return n1 + n2
+// }
+
+// console.log(soma(1,1))
+
+
+// arguments, usa-se esse objeto arguments quando a gente não sabe a quantidade de paramêtros da função 
+
+function sum (){
+
+    let res = 0
+    for (const n of arguments){ // for of, serve para percorrer array pegando seus valores, já o for in pega os indices de um array ou atributo de um objeto
+        console.log(n)
+        res += n // soma conforme o valor de n 
+    }
+    return res
+}
+
+console.log (sum(1,2,3,4,5,6,7)) // valores da função, o for vai percorrer todos eles e o res =+ soma todos eles 
+
+    </script>
+</html>
+

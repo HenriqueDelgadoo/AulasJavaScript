@@ -1,0 +1,18 @@
+<html>
+    <script>
+        //assim como o let ela é "privada" quando declarada dentro do escopo.
+
+        const x = 10;  // declara um valor contante para a variável
+        console.log("x",x)
+        //escopos são espaços em que podem ter loógicas (decisões, iterpretações ou funções)
+        //usa-se a abertura de chaves ("{}"), para representar o escopo
+
+        {
+            console.log("x",x) 
+            x = 20 // cosntantes não podem ser alteradas
+            const y = 30 // declara a variável dentro do escopo local
+        }
+        console.log("x",x)
+        console.log("y",y)  // não acessivel fora do seu contexto (escopo)
+    </script>
+</html>

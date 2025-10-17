@@ -1,0 +1,17 @@
+<html>
+    <script>
+        // var equivalente a uma "variável global"
+        var x = 10; // variável declarada dentro do escopo geral
+        console.log("x",x)
+        //escopos são espaços em que podem ter loógicas (decisões, iterpretações ou funções)
+        //usa-se a abertura de chaves ("{}"), para representar o escopo
+
+        {
+            console.log("x",x) // retorna a variável declarada no escopo geral
+            x = 20 //altera o valor dentro do escopo local que assume o valor para a variável geral
+            var y = 30 // cria a variável dentro do escopo local
+        }
+        console.log("x",x)
+        console.log("y",y) // imprime a variável mesmo que fora do escopo local
+    </script>
+</html>
