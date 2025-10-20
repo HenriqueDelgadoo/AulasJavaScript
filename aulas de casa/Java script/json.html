@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <script>
+        // JavaScript Object Notation (JSON) é um formato baseado em texto padrão para representar dados estruturados com base na sintaxe do objeto javaScript
+        // enviar dados entre o front e servidor
+        // Formato de intercambio entre javaScript e o destinatário
+        // stringify --> parse
+
+        const person = {
+            name: "Henrique Delgado",
+            age: 20,
+            Addres:{
+                rua: "eng. paulo roberto correa da silva",
+                number: "156",
+                cidade: "Limeira"
+            },
+        }
+
+        const personStr = json.stringify(person) // transforma esse objeto em uma string.
+
+        //parse
+
+        const personObj = json.parse(personStr) // transforma a string json em objeto
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+</head>
+<body>
+    <button onclick="loadData()">Recuperar Dados</button>
+    <p><strong></strong></p>
+    <br>
+    <br>
+    <script>
+        //Asynchronous JavaScript and XML(AJAX). Tecnologia usada pra realizar comunicação entre navegador e servidor "sem sair da página"
+        // uma função assincrona para manter o site atualizado com o servidor sem ter que ficar atualizando a página 
+        
+        const loadData = () =>{
+            const xhr = new XMLHttpRequest() // responsável por fazer chamadas remotas no servidor
+            xhr.open("GET", "https://api.github.com/users/HenriqueDelgadoo") // conexão com a pagina
+            xhr.send(null) // faz propriamente a chamada, envio das informações (para o servidor). 
+
+            xhr.onreadystatechange= ()=>{ // function de callback para verificar se a chamada foi feita (sendo Aprovada ou não)
+            if(xhr.readyState === 4){ // caso seja feita corretamente, 4
+                const res = JSON.parse(xhr.responseText) // contém todas as informações da API, em JSON. converte o JSON em objeto
+                console.log(res.blog) // recupera o nome do objeto convertido
+
+                const name = res.name
+                const avatarURL = res.avatar_url
+                const followers = res.followers
+                const company = res.company
+
+                const avatar = document.createElement("img")
+                avatar.setAttribute("width", "128") // coloca um atributo dentro do elemento <img width: 128 src="avatarURL"> </img>
+                avatar.setAttribute("src", avatarURL)
+
+                const nameEl = document.createElement("h1")
+                nameEl.innerHTML = name
+
+                const seguidores = document.createElement("p")
+                seguidores.innerText = `Seguidores: ${followers}`
+
+                const empresa = document.createElement("p")
+                
+                empresa.innerText = company
+
+                document.body.appendChild(avatar)
+                document.body.appendChild(nameEl)
+                document.body.appendChild(seguidores)
+                document.body.appendChild(empresa)
+            }
+            }
+        }
+    </script>
+</body>
+</html>     
