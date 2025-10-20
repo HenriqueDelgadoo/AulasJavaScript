@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Executar</button>
+    <script>
+        //promise é um objeto usado para provessamento assíncrono. Uma promise(promessa) representa um valor que pode estar disponível agora, no futuro ou nunca. Muita nescessário na chamada de API, pode ser que de certo ou não, para isso ultiliza o promisse para mostrar ao usuário que o processo está sendo realizado(waiting ...) ou processo rejeitado
+
+        // importante entender as funções sincronas e assincronas:
+        // sincronas: Tarefas rápidas e sequenciais (ex: cálculos simples)
+        //assincronas: Tarefas demoradas ou que dependem de resposta externa (ex: acesso à internet, leitura de arquivos)
+
+        //uma promise está em um destes estados:
+        //pending (pendente): estado inicial, que não foi realizado nem rejeitado
+        //fulfilled(realizada): Sucesso na operação
+        // rejected(rejeitado): Falha na operação
+        
+        let count = 0
+
+
+        function testPromise(){
+            const promiseCount =  ++count
+            console.log("Sync started")
+
+            const p1 = new Promise((resolve, reject)=>{ // informar que algo foi realizado
+                setTimeout(() => { // função assincrona, ela executa "fora" da rota principal, com sua própria função
+                    // resolve(promiseCount)
+                    if(promiseCount % 2 == 0){
+                        resolve(promiseCount)
+                    }else{
+                        reject(promiseCount)
+                    }
+                }, 1000)
+
+            }).then((value)=>{ // quando terminar, capturar o resolve
+                console.log(`async finished ${value}`)
+            }).catch(()=>{
+                console.log("async error")
+            })
+
+            // como puxar o resultado de varias promises: ( promise.all([]))
+
+            // promise.all([p1,p2,p3]).then((values)=>{
+            //     console.log(`promises vales: ${values}`)
+            // }).catch(()=>{
+            //console.log("promises error")})
+
+            console.log("sync finished")
+        }
+        const button = document.querySelector("button")
+        button.addEventListener("click", testPromise)
+
+    </script>
+</body>
+</html>

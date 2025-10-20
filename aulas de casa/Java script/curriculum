@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>curriculum</title>
+</head>
+<body>
+    <img src="foto.png" width="100">
+    <h1 id="person-name" class="text">Seu Nome</h1>
+    <h2>Programador JavaScript</h2>
+    <p class="text">Conhecimento em programação frontend, Backend, para desenvolvimento Fullstack.</p>
+    <p>saiba mais
+        <a href="github.com">github</a>
+        <a href="linkedlin.com">linkedlin</a>
+    </p>
+    <script>
+
+        // alterar um elemento pelo JS
+
+        const nome = document.querySelector("#person-name")
+        console.log("nome value:", nome.innerHTML)
+        nome.innerHTML = "Henrique Delgado" // coloca o nome no elemento do ID(innerHTML)
+        nome.style.color = "red"
+        // abertura de frameworks, começam por aqui
+
+        //Criando elementos com JS
+        
+        const subtitle = document.createElement("h2") // cria o elemento h2
+        subtitle.innerHTML = "Linguagens" //coloca o texto
+
+        document.body.append(subtitle) // adiciona esse documento na arvore do DOM
+
+        const lista = document.createElement("ul") // cria a lista "ul" no HTML
+        const item1 =document.createElement("li") // cria os elemntos "li"
+        item1.innerHTML = "Java Script"
+        const item2 =document.createElement("li")
+        item2.innerHTML = "PHP"
+        const item3 =document.createElement("li")
+        item3.innerHTML = "Python"
+
+        
+        lista.append(item1) // coloca os elementos "li" dentro da "ul"
+        lista.append(item2)
+        lista.append(item3)
+        document.body.append(lista) // coloca todo os elementos "li"e "ul" no body do HTML
+        
+
+        for(let i = 0; i < 3; i++)
+            item3.innerHTML = ` python ${i}`
+
+
+            
+        </script>
+</body>
+</html>

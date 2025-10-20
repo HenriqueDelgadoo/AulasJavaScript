@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Eventos no DOM, é importante para o entendimento de que quando algo na sua página web for executado rodará alhum script. Deixando ele aprova de erros de carregamento
+
+        document.addEventListener("DOMContentLoaded", ()=>{ 
+        const el1 = document.querySelector("#title")
+        console.log(el1)
+        }) // esse evento se trata de quando o DOM estiver totalmente carregada 
+
+    </script>
+    <h1 id="title">Minha página</h1>
+    <button>Clique me</button>
+    <a href="array.html">Clique me</a>
+
+    <input type="text">
+
+    <form action="https>//google.com/search" method="get">
+        <label for="q">busca</label>
+        <input type="text" name="q">
+        <input type="submit" value="Pesquisar">
+    
+    </form>
+    
+    <script>
+        //mapear eventos de cliques
+
+        const button = document.querySelector("button")
+        button.addEventListener("click", ()=>{
+            console.log("clicou no botão")
+        })
+        const hyperlink = document.querySelector("a")
+            hyperlink.addEventListener("click", (event)=>{ //"click" método para mapear clicks em interações
+                event.preventDefault() // não segue o comportamento padrão, não segue para o site
+            console.log("clicou no hyperlink")
+        })
+
+        //eventos de teclas
+
+        const input = document.querySelector("input[type=text]")
+
+        input.addEventListener("keydown", (event)=>{ // keydown, quando a tecla é acionada
+            console.log("event", `${event.key} - ${event.keyCode}`)
+            if(event.keyCode === 13){
+                alert (`TECLA ENTER PRESSIONADA - ${input.value}`)
+            }
+        })
+        input.addEventListener("keyup",(event)=>{ // event gera um objeto com as informações da tecla acionada
+            console.log("keyup") // keyup, quando a tecla sobe após ser acionada
+        })
+
+        //Evento submit, ao clique enviar o input
+        const formEl= document.querySelector("form")
+        formEl.addEventListener("submit", (event)=>{
+            const queryValue = event.target.querySelector("input[name=q]").value // pegar o valor do input
+            //event.preventDefault() // para a ação padrão do script
+            console.log("queryValue", queryValue )
+
+            if(!queryValue){
+                event.preventDefault() // para a ação padrão do formulário
+                const mensagem = document.createElement("p")
+                mensagem.innerHTML = "*Campo de pesquisa obrigatório!"
+                mensagem.style.color = "red"
+
+                document.body.append(mensagem)
+            }
+
+        })
+
+
+    </script>
+
+</body>
+</html>

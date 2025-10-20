@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <style>
+        .highlight{
+            color: red;
+        }
+    </style>
+    <h1 id="title">Título da página</h1>
+    <button id="change-color">Alterar cor</button>
+
+    <script>
+
+        // alterando elementos do css inline no java script
+        const titulo = document.querySelector("#title")
+
+        // const button = document.querySelector("#change-color")
+        // button.addEventListener("click", (event)=>{
+        //     titulo.style = "color: red; font-size: 55px; background-color: black"
+        // })
+
+        // manipulando com classe em css
+
+        const button = document.querySelector("#change-color")
+        button.addEventListener("click", ()=>{
+            // if(titulo.classList.contains ("highlight")){// para ver se o elemento possui uma classe.]
+            //     titulo.classList.remove("highlight") // remove a classe do elemento, então se ele possuir essa clase, remova
+            // } else{
+            //     titulo.classList.add("highlight") // senão adicione a classe ao elemento
+            // }
+                
+            titulo.classList.toggle("highlight") // executa toda a função if acima 
+        })
+
+
+    </script>
+</body>
+</html>
