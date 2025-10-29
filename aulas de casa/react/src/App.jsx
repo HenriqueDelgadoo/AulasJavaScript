@@ -11,22 +11,22 @@ function App() {
   useEffect(()=>{ // para o local storage
     localStorage.setItem("tasks",JSON.stringify(tasks))  }, [tasks])
   
-  useEffect(()=>{
-    async function fetchTasks(){
+  // useEffect(()=>{
+  //   async function fetchTasks(){
 
-    // chamar a API
-    const response = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=10', {
-      method: 'GET'
-    })
+  //   // chamar a API
+  //   const response = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=10', {
+  //     method: 'GET'
+  //   })
   
-    //Pegar os dados que ela retorna 
-    const data  = await response.json()
+  //   //Pegar os dados que ela retorna 
+  //   const data  = await response.json()
 
-    //armazenar esses dados
-    setTasks(data)
-  }
-  fetchTasks()
-  }, [])
+  //   //armazenar esses dados
+  //   setTasks(data)
+  // }
+  // fetchTasks()
+  // }, [])
 
   function onAddTaskSubmit(title, description){
     const newTask ={
